@@ -32,4 +32,5 @@ const ProductsGrid = () => {
     </div>
   )
 }
+
 export default ProductsGrid

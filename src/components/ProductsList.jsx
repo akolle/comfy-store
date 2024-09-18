@@ -12,7 +12,7 @@ const ProductsList = () => {
         return (
           <Link
             key={product.id}
-            to={`{/products/${product.id}}`}
+            to={`/products/${product.id}`}
             className="p-8 rounded-lg flex flex-col sm:flex-row gap-y-4 flex-wrap bg-base-100 shadow-xl hover:shadow-2xl duration-300 group"
           >
             <img
@@ -25,6 +25,7 @@ const ProductsList = () => {
               <h4 className="capitalize text-md text-neutral-content">
                 {company}
               </h4>
+              {/* COLOR */}
             </div>
             <p className="font-medium ml-0 sm:ml-auto text-lg">
               {dollarsAmount}

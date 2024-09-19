@@ -22,6 +22,7 @@ const SingleProduct = () => {
     setAmount(parseInt(e.target.value))
   }
 
+  const dispatch = useDispatch()
   const cartProduct = {
     cartID: product.id + productColor,
     productID: product.id,
@@ -32,8 +33,6 @@ const SingleProduct = () => {
     productColor,
     amount,
   }
-
-  const dispatch = useDispatch()
 
   const addToCart = () => {
     dispatch(addItem({ product: cartProduct }))
@@ -106,7 +105,7 @@ const SingleProduct = () => {
           </div>
           {/* CART BTN */}
           <div className="mt-10">
-            <button className="btn btn-secondary btn-md" onClick={addToCart()}>
+            <button className="btn btn-secondary btn-md" onClick={addToCart}>
               Add to bag
             </button>
           </div>

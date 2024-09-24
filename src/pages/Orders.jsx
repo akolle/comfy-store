@@ -37,6 +37,16 @@ export const loader =
   }
 
 const Orders = () => {
-  return <div>Orders</div>
+  const { meta } = useLoaderData()
+  if (meta.pagination.total < 1) {
+    return <SectionTitle text="please make an order" />
+  }
+  return (
+    <>
+      <SectionTitle text="Your orders" />
+      <OrdersList />
+      <PaginationContainer />
+    </>
+  )
 }
 export default Orders
